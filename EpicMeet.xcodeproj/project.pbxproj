@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EE8D283815C2689A2DBE2E5 /* Pods_EpicMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55681FF0802F20B494FAB738 /* Pods_EpicMeet.framework */; };
+		8D2C3A722A6E53F800EE94CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C3A702A6E53F800EE94CC /* Main.storyboard */; };
+		8D2C3A752A6E589E00EE94CC /* ScheduleMeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C3A732A6E589E00EE94CC /* ScheduleMeetingTableViewCell.swift */; };
+		8D2C3A762A6E589E00EE94CC /* ScheduleMeetingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C3A742A6E589E00EE94CC /* ScheduleMeetingTableViewCell.xib */; };
+		8D2C3A792A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C3A772A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.swift */; };
+		8D2C3A7A2A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C3A782A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.xib */; };
+		8D2C3A7F2A6F7FE100EE94CC /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C3A7E2A6F7FE100EE94CC /* GroupViewController.swift */; };
+		8D2C3A862A6F804500EE94CC /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C3A842A6F804500EE94CC /* GroupTableViewCell.swift */; };
+		8D2C3A872A6F804500EE94CC /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2C3A852A6F804500EE94CC /* GroupTableViewCell.xib */; };
+		8D2C3A8A2A6F8FE000EE94CC /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C3A892A6F8FE000EE94CC /* ForgotPasswordViewController.swift */; };
+		8D2C3A8D2A6F927400EE94CC /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2C3A8C2A6F927400EE94CC /* SuccessViewController.swift */; };
+		8D9D18A62A69031B00D5CE6E /* RecentCallsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D18A42A69031B00D5CE6E /* RecentCallsTableViewCell.swift */; };
+		8D9D18A72A69031B00D5CE6E /* RecentCallsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D18A52A69031B00D5CE6E /* RecentCallsTableViewCell.xib */; };
+		8D9D18AB2A693E2400D5CE6E /* ScheduledMeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D18A92A693E2400D5CE6E /* ScheduledMeetingTableViewCell.swift */; };
+		8D9D18AC2A693E2400D5CE6E /* ScheduledMeetingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9D18AA2A693E2400D5CE6E /* ScheduledMeetingTableViewCell.xib */; };
+		8D9D18AE2A6A44F400D5CE6E /* EpicMeetHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D18AD2A6A44F400D5CE6E /* EpicMeetHomeViewController.swift */; };
+		8D9D18B12A6A6A5100D5CE6E /* ScheduleMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D18B02A6A6A5100D5CE6E /* ScheduleMeetingViewController.swift */; };
+		8DF16E082A665EAA00ED8FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF16E072A665EAA00ED8FCE /* AppDelegate.swift */; };
+		8DF16E0A2A665EAA00ED8FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF16E092A665EAA00ED8FCE /* SceneDelegate.swift */; };
+		8DF16E112A665EAC00ED8FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF16E102A665EAC00ED8FCE /* Assets.xcassets */; };
+		8DF16E142A665EAC00ED8FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DF16E122A665EAC00ED8FCE /* LaunchScreen.storyboard */; };
+		8DF16E1C2A66908C00ED8FCE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF16E1B2A66908C00ED8FCE /* Extensions.swift */; };
+		A71B0A3B2ABAA4EF00FCAFD3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71B0A3A2ABAA4EF00FCAFD3 /* SignInViewController.swift */; };
+		A749C5992A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749C5972A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.swift */; };
+		A749C59A2A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A749C5982A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.xib */; };
+		A749C59C2A722CA400A4E51B /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A749C59B2A722CA400A4E51B /* VideoViewController.swift */; };
+		A75461E02A935C2600C79002 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461DE2A935C2600C79002 /* VideoCollectionViewCell.swift */; };
+		A75461E12A935C2600C79002 /* VideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75461DF2A935C2600C79002 /* VideoCollectionViewCell.xib */; };
+		A75461F42A93854000C79002 /* ActionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461EF2A93853F00C79002 /* ActionEvent.swift */; };
+		A75461F52A93854000C79002 /* SocketUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461F02A93853F00C79002 /* SocketUtil.swift */; };
+		A75461F62A93854000C79002 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461F12A93853F00C79002 /* RequestHelper.swift */; };
+		A75461F72A93854000C79002 /* MySendTransportListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461F22A93853F00C79002 /* MySendTransportListener.swift */; };
+		A75461F82A93854000C79002 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461F32A93853F00C79002 /* Message.swift */; };
+		A75461FE2A9385D300C79002 /* ChatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461FB2A9385D300C79002 /* ChatCollectionView.swift */; };
+		A75461FF2A9385D300C79002 /* ChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75461FC2A9385D300C79002 /* ChatCollectionViewCell.xib */; };
+		A75462002A9385D300C79002 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75461FD2A9385D300C79002 /* ChatCollectionViewCell.swift */; };
+		A75462022A93862300C79002 /* ChatRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75462012A93862300C79002 /* ChatRender.swift */; };
+		A75AD6642AC2A986009D2B5A /* dashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD6622AC2A985009D2B5A /* dashBoardTableViewCell.swift */; };
+		A75AD6652AC2A986009D2B5A /* dashBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A75AD6632AC2A985009D2B5A /* dashBoardTableViewCell.xib */; };
+		A77CFF562AC17E3D0040C485 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77CFF552AC17E3D0040C485 /* DashBoardViewController.swift */; };
+		A7FA534C2ABB239F0038EE65 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA534B2ABB239F0038EE65 /* SignUpViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		A75461EC2A937F8400C79002 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.bplist;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		55681FF0802F20B494FAB738 /* Pods_EpicMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EpicMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7550E04DDFCE99E1D515A313 /* Pods-EpicMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpicMeet.release.xcconfig"; path = "Target Support Files/Pods-EpicMeet/Pods-EpicMeet.release.xcconfig"; sourceTree = "<group>"; };
+		8D2C3A712A6E53F800EE94CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EpicMeet/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D2C3A732A6E589E00EE94CC /* ScheduleMeetingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMeetingTableViewCell.swift; sourceTree = "<group>"; };
+		8D2C3A742A6E589E00EE94CC /* ScheduleMeetingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleMeetingTableViewCell.xib; sourceTree = "<group>"; };
+		8D2C3A772A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = invitedParticipentsTableViewCell.swift; sourceTree = "<group>"; };
+		8D2C3A782A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = invitedParticipentsTableViewCell.xib; sourceTree = "<group>"; };
+		8D2C3A7E2A6F7FE100EE94CC /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		8D2C3A842A6F804500EE94CC /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		8D2C3A852A6F804500EE94CC /* GroupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		8D2C3A892A6F8FE000EE94CC /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		8D2C3A8C2A6F927400EE94CC /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		8D9D18A42A69031B00D5CE6E /* RecentCallsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallsTableViewCell.swift; sourceTree = "<group>"; };
+		8D9D18A52A69031B00D5CE6E /* RecentCallsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentCallsTableViewCell.xib; sourceTree = "<group>"; };
+		8D9D18A92A693E2400D5CE6E /* ScheduledMeetingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledMeetingTableViewCell.swift; sourceTree = "<group>"; };
+		8D9D18AA2A693E2400D5CE6E /* ScheduledMeetingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduledMeetingTableViewCell.xib; sourceTree = "<group>"; };
+		8D9D18AD2A6A44F400D5CE6E /* EpicMeetHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicMeetHomeViewController.swift; sourceTree = "<group>"; };
+		8D9D18B02A6A6A5100D5CE6E /* ScheduleMeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMeetingViewController.swift; sourceTree = "<group>"; };
+		8DF16E042A665EAA00ED8FCE /* EpicMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EpicMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DF16E072A665EAA00ED8FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8DF16E092A665EAA00ED8FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8DF16E102A665EAC00ED8FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DF16E132A665EAC00ED8FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8DF16E152A665EAC00ED8FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DF16E1B2A66908C00ED8FCE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A71B0A3A2ABAA4EF00FCAFD3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A749C5972A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpicMeetHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A749C5982A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpicMeetHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		A749C59B2A722CA400A4E51B /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		A75461DE2A935C2600C79002 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		A75461DF2A935C2600C79002 /* VideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		A75461EF2A93853F00C79002 /* ActionEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionEvent.swift; sourceTree = "<group>"; };
+		A75461F02A93853F00C79002 /* SocketUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketUtil.swift; sourceTree = "<group>"; };
+		A75461F12A93853F00C79002 /* RequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHelper.swift; sourceTree = "<group>"; };
+		A75461F22A93853F00C79002 /* MySendTransportListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySendTransportListener.swift; sourceTree = "<group>"; };
+		A75461F32A93853F00C79002 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A75461FB2A9385D300C79002 /* ChatCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionView.swift; sourceTree = "<group>"; };
+		A75461FC2A9385D300C79002 /* ChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCollectionViewCell.xib; sourceTree = "<group>"; };
+		A75461FD2A9385D300C79002 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		A75462012A93862300C79002 /* ChatRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRender.swift; sourceTree = "<group>"; };
+		A75AD6622AC2A985009D2B5A /* dashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashBoardTableViewCell.swift; sourceTree = "<group>"; };
+		A75AD6632AC2A985009D2B5A /* dashBoardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dashBoardTableViewCell.xib; sourceTree = "<group>"; };
+		A773B2E42ACBCDA300911825 /* EpicMeet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EpicMeet-Bridging-Header.h"; sourceTree = "<group>"; };
+		A77CFF552AC17E3D0040C485 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		A7FA534B2ABB239F0038EE65 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		AB93C683067A8639974120FF /* Pods-EpicMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpicMeet.debug.xcconfig"; path = "Target Support Files/Pods-EpicMeet/Pods-EpicMeet.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DF16E012A665EAA00ED8FCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EE8D283815C2689A2DBE2E5 /* Pods_EpicMeet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06BA5BEA6BD6457E7530E8E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55681FF0802F20B494FAB738 /* Pods_EpicMeet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B559562E89BF81371C52C34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB93C683067A8639974120FF /* Pods-EpicMeet.debug.xcconfig */,
+				7550E04DDFCE99E1D515A313 /* Pods-EpicMeet.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D2C3A7D2A6E9F9A00EE94CC /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				8D2C3A7E2A6F7FE100EE94CC /* GroupViewController.swift */,
+				8D2C3A842A6F804500EE94CC /* GroupTableViewCell.swift */,
+				8D2C3A852A6F804500EE94CC /* GroupTableViewCell.xib */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		8D2C3A882A6F8FBD00EE94CC /* forgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				8D2C3A892A6F8FE000EE94CC /* ForgotPasswordViewController.swift */,
+				8D2C3A8C2A6F927400EE94CC /* SuccessViewController.swift */,
+			);
+			path = forgotPassword;
+			sourceTree = "<group>";
+		};
+		8D9D18962A67A1AC00D5CE6E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D18AD2A6A44F400D5CE6E /* EpicMeetHomeViewController.swift */,
+				8D2C3A7D2A6E9F9A00EE94CC /* Group */,
+				8D9D18AF2A6A6A3200D5CE6E /* ScheduleMeeting */,
+				8D9D18A82A693DE200D5CE6E /* Scheduled Meeting */,
+				8D9D18A32A6902BA00D5CE6E /* RecentCalls */,
+				8D9D18992A67AC1C00D5CE6E /* collectionView */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8D9D18992A67AC1C00D5CE6E /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A749C5972A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.swift */,
+				A749C5982A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.xib */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
+		8D9D189E2A67C15900D5CE6E /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				A749C59B2A722CA400A4E51B /* VideoViewController.swift */,
+				A75461DE2A935C2600C79002 /* VideoCollectionViewCell.swift */,
+				A75461DF2A935C2600C79002 /* VideoCollectionViewCell.xib */,
+			);
+			path = VideoView;
+			sourceTree = "<group>";
+		};
+		8D9D18A32A6902BA00D5CE6E /* RecentCalls */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D18A42A69031B00D5CE6E /* RecentCallsTableViewCell.swift */,
+				8D9D18A52A69031B00D5CE6E /* RecentCallsTableViewCell.xib */,
+			);
+			path = RecentCalls;
+			sourceTree = "<group>";
+		};
+		8D9D18A82A693DE200D5CE6E /* Scheduled Meeting */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D18A92A693E2400D5CE6E /* ScheduledMeetingTableViewCell.swift */,
+				8D9D18AA2A693E2400D5CE6E /* ScheduledMeetingTableViewCell.xib */,
+			);
+			path = "Scheduled Meeting";
+			sourceTree = "<group>";
+		};
+		8D9D18AF2A6A6A3200D5CE6E /* ScheduleMeeting */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D18B02A6A6A5100D5CE6E /* ScheduleMeetingViewController.swift */,
+				8D2C3A732A6E589E00EE94CC /* ScheduleMeetingTableViewCell.swift */,
+				8D2C3A742A6E589E00EE94CC /* ScheduleMeetingTableViewCell.xib */,
+				8D2C3A772A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.swift */,
+				8D2C3A782A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.xib */,
+			);
+			path = ScheduleMeeting;
+			sourceTree = "<group>";
+		};
+		8DF16DFB2A665EAA00ED8FCE = {
+			isa = PBXGroup;
+			children = (
+				8DF16E062A665EAA00ED8FCE /* EpicMeet */,
+				8DF16E052A665EAA00ED8FCE /* Products */,
+				2B559562E89BF81371C52C34 /* Pods */,
+				06BA5BEA6BD6457E7530E8E9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8DF16E052A665EAA00ED8FCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DF16E042A665EAA00ED8FCE /* EpicMeet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DF16E062A665EAA00ED8FCE /* EpicMeet */ = {
+			isa = PBXGroup;
+			children = (
+				8DF16E072A665EAA00ED8FCE /* AppDelegate.swift */,
+				8DF16E092A665EAA00ED8FCE /* SceneDelegate.swift */,
+				8DF16E1B2A66908C00ED8FCE /* Extensions.swift */,
+				8D2C3A702A6E53F800EE94CC /* Main.storyboard */,
+				A75AD65D2AC2A8EC009D2B5A /* Dashboard */,
+				A75461C22A93488B00C79002 /* Socket */,
+				A729DD3E2A66B66200D448E7 /* LoginAndSignUp */,
+				8D9D189E2A67C15900D5CE6E /* VideoView */,
+				8D9D18962A67A1AC00D5CE6E /* Home */,
+				8DF16E102A665EAC00ED8FCE /* Assets.xcassets */,
+				8DF16E122A665EAC00ED8FCE /* LaunchScreen.storyboard */,
+				8DF16E152A665EAC00ED8FCE /* Info.plist */,
+				A773B2E42ACBCDA300911825 /* EpicMeet-Bridging-Header.h */,
+			);
+			path = EpicMeet;
+			sourceTree = "<group>";
+		};
+		A729DD3E2A66B66200D448E7 /* LoginAndSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A71B0A3A2ABAA4EF00FCAFD3 /* SignInViewController.swift */,
+				A7FA534B2ABB239F0038EE65 /* SignUpViewController.swift */,
+				8D2C3A882A6F8FBD00EE94CC /* forgotPassword */,
+			);
+			path = LoginAndSignUp;
+			sourceTree = "<group>";
+		};
+		A75461C22A93488B00C79002 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				A75461CB2A93496700C79002 /* Views */,
+				A75461CA2A93495D00C79002 /* Request */,
+				A75461C92A93495300C79002 /* Model */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		A75461C92A93495300C79002 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A75462012A93862300C79002 /* ChatRender.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A75461CA2A93495D00C79002 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A75461EF2A93853F00C79002 /* ActionEvent.swift */,
+				A75461F32A93853F00C79002 /* Message.swift */,
+				A75461F22A93853F00C79002 /* MySendTransportListener.swift */,
+				A75461F12A93853F00C79002 /* RequestHelper.swift */,
+				A75461F02A93853F00C79002 /* SocketUtil.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		A75461CB2A93496700C79002 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A75461FB2A9385D300C79002 /* ChatCollectionView.swift */,
+				A75461FD2A9385D300C79002 /* ChatCollectionViewCell.swift */,
+				A75461FC2A9385D300C79002 /* ChatCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A75AD65D2AC2A8EC009D2B5A /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A77CFF552AC17E3D0040C485 /* DashBoardViewController.swift */,
+				A75AD6622AC2A985009D2B5A /* dashBoardTableViewCell.swift */,
+				A75AD6632AC2A985009D2B5A /* dashBoardTableViewCell.xib */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DF16E032A665EAA00ED8FCE /* EpicMeet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DF16E182A665EAC00ED8FCE /* Build configuration list for PBXNativeTarget "EpicMeet" */;
+			buildPhases = (
+				BC7152AA9BECE7C548DA73DF /* [CP] Check Pods Manifest.lock */,
+				8DF16E002A665EAA00ED8FCE /* Sources */,
+				8DF16E012A665EAA00ED8FCE /* Frameworks */,
+				8DF16E022A665EAA00ED8FCE /* Resources */,
+				98D7CC221DC8BB3C72238589 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+				A75461EC2A937F8400C79002 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = EpicMeet;
+			productName = EpicMeet;
+			productReference = 8DF16E042A665EAA00ED8FCE /* EpicMeet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DF16DFC2A665EAA00ED8FCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8DF16E032A665EAA00ED8FCE = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 8DF16DFF2A665EAA00ED8FCE /* Build configuration list for PBXProject "EpicMeet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DF16DFB2A665EAA00ED8FCE;
+			productRefGroup = 8DF16E052A665EAA00ED8FCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DF16E032A665EAA00ED8FCE /* EpicMeet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DF16E022A665EAA00ED8FCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D9D18A72A69031B00D5CE6E /* RecentCallsTableViewCell.xib in Resources */,
+				8D2C3A7A2A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.xib in Resources */,
+				A749C59A2A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.xib in Resources */,
+				8DF16E142A665EAC00ED8FCE /* LaunchScreen.storyboard in Resources */,
+				8D2C3A722A6E53F800EE94CC /* Main.storyboard in Resources */,
+				8DF16E112A665EAC00ED8FCE /* Assets.xcassets in Resources */,
+				A75AD6652AC2A986009D2B5A /* dashBoardTableViewCell.xib in Resources */,
+				8D2C3A762A6E589E00EE94CC /* ScheduleMeetingTableViewCell.xib in Resources */,
+				8D2C3A872A6F804500EE94CC /* GroupTableViewCell.xib in Resources */,
+				8D9D18AC2A693E2400D5CE6E /* ScheduledMeetingTableViewCell.xib in Resources */,
+				A75461E12A935C2600C79002 /* VideoCollectionViewCell.xib in Resources */,
+				A75461FF2A9385D300C79002 /* ChatCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98D7CC221DC8BB3C72238589 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EpicMeet/Pods-EpicMeet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EpicMeet/Pods-EpicMeet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EpicMeet/Pods-EpicMeet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC7152AA9BECE7C548DA73DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EpicMeet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DF16E002A665EAA00ED8FCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71B0A3B2ABAA4EF00FCAFD3 /* SignInViewController.swift in Sources */,
+				A75461E02A935C2600C79002 /* VideoCollectionViewCell.swift in Sources */,
+				A749C5992A722C9000A4E51B /* EpicMeetHomeCollectionViewCell.swift in Sources */,
+				A75462022A93862300C79002 /* ChatRender.swift in Sources */,
+				8DF16E082A665EAA00ED8FCE /* AppDelegate.swift in Sources */,
+				8D2C3A862A6F804500EE94CC /* GroupTableViewCell.swift in Sources */,
+				A749C59C2A722CA400A4E51B /* VideoViewController.swift in Sources */,
+				A75462002A9385D300C79002 /* ChatCollectionViewCell.swift in Sources */,
+				8DF16E0A2A665EAA00ED8FCE /* SceneDelegate.swift in Sources */,
+				A77CFF562AC17E3D0040C485 /* DashBoardViewController.swift in Sources */,
+				8D9D18AE2A6A44F400D5CE6E /* EpicMeetHomeViewController.swift in Sources */,
+				8DF16E1C2A66908C00ED8FCE /* Extensions.swift in Sources */,
+				A75461F82A93854000C79002 /* Message.swift in Sources */,
+				8D9D18AB2A693E2400D5CE6E /* ScheduledMeetingTableViewCell.swift in Sources */,
+				A75461F62A93854000C79002 /* RequestHelper.swift in Sources */,
+				A75461F52A93854000C79002 /* SocketUtil.swift in Sources */,
+				8D2C3A8D2A6F927400EE94CC /* SuccessViewController.swift in Sources */,
+				A75461F42A93854000C79002 /* ActionEvent.swift in Sources */,
+				8D2C3A7F2A6F7FE100EE94CC /* GroupViewController.swift in Sources */,
+				8D2C3A8A2A6F8FE000EE94CC /* ForgotPasswordViewController.swift in Sources */,
+				8D9D18A62A69031B00D5CE6E /* RecentCallsTableViewCell.swift in Sources */,
+				8D2C3A752A6E589E00EE94CC /* ScheduleMeetingTableViewCell.swift in Sources */,
+				A75AD6642AC2A986009D2B5A /* dashBoardTableViewCell.swift in Sources */,
+				A7FA534C2ABB239F0038EE65 /* SignUpViewController.swift in Sources */,
+				8D9D18B12A6A6A5100D5CE6E /* ScheduleMeetingViewController.swift in Sources */,
+				8D2C3A792A6E5C0D00EE94CC /* invitedParticipentsTableViewCell.swift in Sources */,
+				A75461FE2A9385D300C79002 /* ChatCollectionView.swift in Sources */,
+				A75461F72A93854000C79002 /* MySendTransportListener.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D2C3A702A6E53F800EE94CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D2C3A712A6E53F800EE94CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8DF16E122A665EAC00ED8FCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DF16E132A665EAC00ED8FCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8DF16E162A665EAC00ED8FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/runnikrishnan/Desktop/AppsTeam/VideoConference/0.4/EpicMeet/EpicMeet/EpicMeet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DF16E172A665EAC00ED8FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8DF16E192A665EAC00ED8FCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB93C683067A8639974120FF /* Pods-EpicMeet.debug.xcconfig */;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 67TA844NHW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EpicMeet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EpicMeet;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				NEW_SETTING1 = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsteam.epicmeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = EpicMeetDevelopment;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/runnikrishnan/Desktop/AppsTeam/VideoConference/0.4/EpicMeet/EpicMeet/EpicMeet-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8DF16E1A2A665EAC00ED8FCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7550E04DDFCE99E1D515A313 /* Pods-EpicMeet.release.xcconfig */;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 67TA844NHW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EpicMeet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EpicMeet;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				NEW_SETTING1 = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsteam.epicmeet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = EpicMeetDevelopment;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DF16DFF2A665EAA00ED8FCE /* Build configuration list for PBXProject "EpicMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DF16E162A665EAC00ED8FCE /* Debug */,
+				8DF16E172A665EAC00ED8FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DF16E182A665EAC00ED8FCE /* Build configuration list for PBXNativeTarget "EpicMeet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DF16E192A665EAC00ED8FCE /* Debug */,
+				8DF16E1A2A665EAC00ED8FCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8DF16DFC2A665EAA00ED8FCE /* Project object */;
+}

@@ -1,0 +1,28 @@
+PODS:
+  - DropDown (2.3.2)
+  - mediasoup_ios_client (1.5.4)
+  - Starscream (4.0.4)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - DropDown
+  - mediasoup_ios_client
+  - Starscream
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - mediasoup_ios_client
+    - Starscream
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  DropDown: 7f87abecc28f9b4edad810fe1211c5c018c257e5
+  mediasoup_ios_client: b7ff4fe25cf2069cfa04a63690b0cdcdd4a4822c
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: b844425ac3780b78ca56a5bac144a7c242fb5e0e
+
+COCOAPODS: 1.11.3

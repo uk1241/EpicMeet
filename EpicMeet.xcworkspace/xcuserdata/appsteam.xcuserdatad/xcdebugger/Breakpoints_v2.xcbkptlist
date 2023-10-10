@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E44F251A-AC0B-4FE4-891B-77B467388D71"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC567E4D-601E-4E1E-9F66-95BEF7C2FA79"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EpicMeet/VideoView/VideoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "onProducerUpdateUI(helper:producer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D74AFE54-5C3D-40F8-AA12-FCD7DD95A252"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EpicMeet/VideoView/VideoViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "onNewConsumerUpdateUI(helper:consumer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD6ACE53-563E-4953-8440-FC26C8D0571A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EpicMeet/Socket/Request/RequestHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1041"
+            endingLineNumber = "1041"
+            landmarkName = "onDidReceiveMessage(message:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AD6ACE53-563E-4953-8440-FC26C8D0571A - 13e731d6dd17507e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EpicMeet.RequestHelper.onDidReceiveMessage(message: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "EpicMeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsteam/Desktop/EpicMeet/EpicMeet/Socket/Request/RequestHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1040"
+                  endingLineNumber = "1040"
+                  offsetFromSymbolStart = "16032">
+               </Location>
+               <Location
+                  uuid = "AD6ACE53-563E-4953-8440-FC26C8D0571A - 13e731d6dd17507e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EpicMeet.RequestHelper.onDidReceiveMessage(message: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "EpicMeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsteam/Desktop/EpicMeet/EpicMeet/Socket/Request/RequestHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1040"
+                  endingLineNumber = "1040"
+                  offsetFromSymbolStart = "16048">
+               </Location>
+               <Location
+                  uuid = "AD6ACE53-563E-4953-8440-FC26C8D0571A - 13e731d6dd17507e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EpicMeet.RequestHelper.onDidReceiveMessage(message: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "EpicMeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsteam/Desktop/EpicMeet/EpicMeet/Socket/Request/RequestHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1040"
+                  endingLineNumber = "1040"
+                  offsetFromSymbolStart = "16100">
+               </Location>
+               <Location
+                  uuid = "AD6ACE53-563E-4953-8440-FC26C8D0571A - 13e731d6dd17509f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EpicMeet.RequestHelper.onDidReceiveMessage(message: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "EpicMeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsteam/Desktop/EpicMeet/EpicMeet/Socket/Request/RequestHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1041"
+                  endingLineNumber = "1041"
+                  offsetFromSymbolStart = "16100">
+               </Location>
+               <Location
+                  uuid = "AD6ACE53-563E-4953-8440-FC26C8D0571A - 13e731d6dd17509f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EpicMeet.RequestHelper.onDidReceiveMessage(message: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; ()"
+                  moduleName = "EpicMeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/appsteam/Desktop/EpicMeet/EpicMeet/Socket/Request/RequestHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1041"
+                  endingLineNumber = "1041"
+                  offsetFromSymbolStart = "16396">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
