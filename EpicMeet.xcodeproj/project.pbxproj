@@ -265,8 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				A71B0A3A2ABAA4EF00FCAFD3 /* SignInViewController.swift */,
-				A7FA534B2ABB239F0038EE65 /* SignUpViewController.swift */,
 				8D2C3A882A6F8FBD00EE94CC /* forgotPassword */,
+				A7FA534B2ABB239F0038EE65 /* SignUpViewController.swift */,
 			);
 			path = LoginAndSignUp;
 			sourceTree = "<group>";
@@ -655,7 +655,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/runnikrishnan/Desktop/AppsTeam/VideoConference/0.4/EpicMeet/EpicMeet/EpicMeet-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/runnikrishnan/Desktop/AppsConnect/VideoConference/0.4/EpicMeet/EpicMeet/EpicMeet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

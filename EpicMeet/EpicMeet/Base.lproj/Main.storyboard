@@ -733,7 +733,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR6-bk-mO4">
-                                        <rect key="frame" x="342" y="724" width="50" height="50"/>
+                                        <rect key="frame" x="343" y="701" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="call_End"/>
@@ -773,10 +773,10 @@
                         <viewLayoutGuide key="safeArea" id="NPd-hs-byU"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="exT-QD-adJ" firstAttribute="top" secondItem="NPd-hs-byU" secondAttribute="top" id="6K1-OY-kIj"/>
-                            <constraint firstItem="exT-QD-adJ" firstAttribute="trailing" secondItem="NPd-hs-byU" secondAttribute="trailing" id="XCy-Nr-vQs"/>
-                            <constraint firstAttribute="bottom" secondItem="exT-QD-adJ" secondAttribute="bottom" id="oh7-xi-h7Q"/>
-                            <constraint firstItem="exT-QD-adJ" firstAttribute="leading" secondItem="NPd-hs-byU" secondAttribute="leading" id="pHJ-Zl-DO9"/>
+                            <constraint firstItem="exT-QD-adJ" firstAttribute="trailing" secondItem="NPd-hs-byU" secondAttribute="trailing" id="Uju-Th-BB0"/>
+                            <constraint firstAttribute="bottom" secondItem="exT-QD-adJ" secondAttribute="bottom" id="g12-xM-jUZ"/>
+                            <constraint firstItem="exT-QD-adJ" firstAttribute="top" secondItem="NPd-hs-byU" secondAttribute="top" id="o4q-cK-3gH"/>
+                            <constraint firstItem="exT-QD-adJ" firstAttribute="leading" secondItem="NPd-hs-byU" secondAttribute="leading" id="uf7-QJ-d6K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tOs-8x-BOh"/>

@@ -189,19 +189,6 @@ extension RequestHelper{
         
         return JSON(rawValue: returnadata) ?? ""
     }
-    //    public func joinRoomRequest(roomId: String) -> JSON {
-    //        guard let socket = self.socket else { return JSON() }
-    //        let message = Message(socket: socket, messageId: ActionEventID.kConnectID)
-    //        // Data: {"commandType":"CreateRoom","Data":{"RoomId":"123"}}
-    //        let dataRequest: JSON = ["Name": "","RoomId": roomId]
-    //        let getJoinRoomRequest: JSON = [
-    //            "commandType": "JoinRoom",
-    //            "Data": dataRequest
-    //        ]
-    //        let returnadata = message.sendData(method: getJoinRoomRequest)
-    //        print(returnadata)
-    //        return JSON(rawValue: returnadata) ?? ""
-    //    }
     func sendGetRoomRtpCapabilitiesRequest(roomId: Int) -> JSON {
         guard let socket = self.socket else { return JSON() }
         let dataRequest: JSON = ["Name": nameID, "RoomId": roomID]
@@ -216,32 +203,6 @@ extension RequestHelper{
         let json:JSON = JSON(returnadata)
         return getRoomRtpCapabilitiesRequest
     }
-    //MARK: -
-    
-    //    public func onGetCapabilities()->String{
-    //        guard let socket = self.socket else{return ""}
-    //        let message = Message(socket: socket,messageId: ActionEventID.kConnectID)
-    //        let data:[String:Any] =  ["action":"getRoomRtpCapabilities","roomId":roomId]
-    //        let result = message.send(method: ActionEvent.getRouterRtpCapabilities, data: data)
-    //        let json:JSON = JSON(result)
-    //        print("Connection string obtained successfully. . .")
-    //        return json.description
-    //
-    //    }
-    
-    /* func createConsumerTransport(roomId: String) -> JSON {
-     guard let socket = self.socket else { return JSON() }
-     let dataRequest: JSON = ["transport_id": "Rihesh", "RoomId": roomId, "dtlsParameters":]
-     let message = Message(socket: socket, messageId: ActionEventID.kConnectID)
-     let getRoomRtpCapabilitiesRequest: JSON = [
-     "commandType": "connectTransport",
-     "Data": dataRequest
-     ]
-     let returnadata = message.sendData(method: getRoomRtpCapabilitiesRequest)
-     print("RTP CAPABLITIES\(returnadata)")
-     let json:JSON = JSON(returnadata)
-     return getRoomRtpCapabilitiesRequest
-     }*/
     public func createWebRtcTransport(transportTypeStr: String,RoomId:Int,deviceObj: MediasoupDevice) -> JSON
     {
         guard let socket = self.socket else { return JSON() }
@@ -273,7 +234,7 @@ extension RequestHelper{
     public func produceTransport(transportTypeStr: String,transportID: String,dtlsParameters: JSON,role: String) -> JSON
     {
         guard let socket = self.socket else { return JSON() }
-        let dataRequest: JSON = ["transport_id": transportID, "RoomId": roomId,"transportType":transportTypeStr,"dtlsParameters": dtlsParameters , "role": role]
+        let dataRequest: JSON = ["transport_id": transportID, "RoomId": roomID,"transportType":transportTypeStr,"dtlsParameters": dtlsParameters , "role": role]
         let message = Message(socket: socket, messageId: ActionEventID.kConnectID)
         let produceTransportRequest: JSON = [
             "commandType": "produceTransport",
@@ -284,10 +245,10 @@ extension RequestHelper{
         let json:JSON = JSON(returnadata)
         return produceTransportRequest
     }
-    public func getProducerList()
+    public func getProducerList(name : String,RoomId : Int)
     {
         let socket = self.socket
-        let dataRequest: JSON = ["Name": nameID, "RoomId": roomId]
+        let dataRequest: JSON = ["Name": name, "RoomId": RoomId]
         let message = Message(socket: socket!, messageId: ActionEventID.kConnectID)
         let getProducersRequest: JSON = [
             "commandType": "getProducers",
@@ -507,18 +468,6 @@ extension RequestHelper{
     func getCosumerStream(roomid:Int,transportId:String,ProducerId:String,RtpCapabilities:JSON)->JSON{
         
         let jsonArray = JSON ()
-        //        let data = RtpCapabilities.data(using: .utf8)!
-        //        do {
-        //            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
-        //            {
-        //               print(jsonArray) // use the json here
-        //            } else {
-        //                print("bad json")
-        //            }
-        //        } catch let error as NSError {
-        //            print(error)
-        //        }
-        // let rtpDic = RtpCapabilities.toDic()
         let rtpDic = RtpCapabilities
         guard let socket = self.socket else { return JSON() }
         let dataRequest: JSON = ["consumerTransportId": transportId, "RoomId": roomid,"ProducerId":ProducerId,"RtpCapabilities": rtpDic]
@@ -581,8 +530,6 @@ extension RequestHelper{
         self.consumerHandler = ConsumerHandler()
         print("Number of existing videos:\(self.consumersInfoVideos.count)")
         print("Existing audio quantity:\(self.consumersInfoVideos.count)")
-        
-        
         for consumerVideo in self.consumersInfoVideos{
             //video
             let requestIdV = consumerVideo.intValue("requestId")
@@ -628,6 +575,7 @@ extension RequestHelper{
             self.sendResponse(requestId: requestIdA)
             print("\r\ncomplete loop creation consume audio\(Thread.current)")
         }
+//        startVideoAndAudio()
     }
     ///Turn on audio and video 4
     func startVideoAndAudio() {
@@ -638,7 +586,7 @@ extension RequestHelper{
             })
         } else {
             self.startAudio()
-            //            self.startVideo()
+//                        self.startVideo()
         }
         print("ready to start video startVideo()：\(Thread.current)")
         if AVCaptureDevice.authorizationStatus(for: .video) != .authorized {
@@ -720,32 +668,11 @@ extension RequestHelper{
         return JSON(rawValue: returnadata) ?? ""
     }
     func stopVideo(){
-        //        videoProducer.close()
         
-        //        var dataObj = { commandType: "producerClosed", Data: { RoomId: this.room_id, ProducerId: producer_id, Type: type } };
-        //        this.socket.sendCommand(JSON.stringify(dataObj))
-        //    producerClosed(roomId: roomId, producerId: producer_idArray[0], type: "video")
-        //           let cameraDevice = SocketUtil.removeCameraDevice()
-        
-        //
         guard let videoTrack = self.mediaStream?.videoTracks.first else {
             return
         }
-        
-        // Remove the video track from the local video view
-        //        guard let localVideoView = delegate?.getLocalRanderView(helper: self) else {
-        //            return
-        //        }
-        //        videoTrack.remove(localVideoView)
-        //
-        //        // Stop the video capture and remove the track from the media stream
-        //        videoCapture?.stopCapture()
-        //        self.mediaStream?.removeVideoTrack(videoTrack)
-        
-        // Dispose the video track
         videoTrack.isEnabled = false
-        
-        
         print("video Stopped")
     }
     ///build audio
@@ -891,7 +818,7 @@ extension RequestHelper:WebSocketDelegate{
                 //                connectTransport(transportTypeStr: "Producer", transportID: id, dtlsParameters: JSON(paramsDict.dictionary("dtlsParameters")), role: "server")
                 createWebRtcTransport(transportTypeStr: "consumerTransport", RoomId: roomID, deviceObj: self.device!)
                 startVideoAndAudio()
-                createConsumerAndResume()
+//                createConsumerAndResume()
             }
             else
             {
@@ -899,30 +826,24 @@ extension RequestHelper:WebSocketDelegate{
                 self.recvListener.helper = self
                 self.recvTransport = device?.createRecvTransport(self.recvListener, id: id, iceParameters: iceParameters, iceCandidates: iceCandidates, dtlsParameters: dtlsParameters)
                 // connectTransport(transportTypeStr: "Consumer", transportID: id, dtlsParameters: JSON(paramsDict.dictionary("dtlsParameters")), role: "client")
-                //startVideoAndAudio()
-                //                 createConsumerAndResume()
             }
         }
         if Event == "Transportconnected"
         {
             if transportConnctFlag==0{
-                
-                getProducerList()
+
+                getProducerList(name: nameID, RoomId: roomID)
             }
             transportConnctFlag=1
         }
         if Event == "produced"
         {
-            //                        startVideoAndAudio()
-            //            startVideoAndAudio()
-            //                        createConsumerAndResume()
-            //            getProducerList()
-            
+            getProducerList(name: nameID, RoomId: roomID)
         }
         if Event == "ProducersReceived"
         {
             let data =  message.dictionary("Data")
-            print("data",data)
+            print("data of  producers recived:",data)
             let dataArray = data["producerList"] as! [[String:Any]]
             print("dataArray",dataArray)
             
@@ -934,7 +855,6 @@ extension RequestHelper:WebSocketDelegate{
                 }
             }
             print("producer_idArray",producer_idArray)
-            
             if producer_idArray.count>0{
                 for i in 0...producer_idArray.count-1{
                     getCosumerStream(roomid: roomID, transportId: id, ProducerId: producer_idArray[i] , RtpCapabilities: capabilityJSON)
@@ -947,79 +867,81 @@ extension RequestHelper:WebSocketDelegate{
             print("ParticipantListUpdate data : ",data)
             let dataArray = data.array("Data")
             let producerDic = dataArray
-            
-            ////                        if let dataArray = data["Data"] as? [[String: Any]]
-            ////                            if let userId = item["transports"] as? [[String:Any]] {
-            ////                        {
-            ////                            for item in dataArray {
-            //////                                    userIds.append(userId)
-            ////                                }
-            ////                            }
-            ////                            print(userIds)
-            ////                        }
-            //                              var transportsArray: [String: Any] = [:]
-            //                              var tempArrayDict=[String:Any]()
-            //                              var mainArray=[[String:Any]]()
-            //                              if let dataArray = data["Data"] as? [[String: Any]]
-            //                              {
-            //                                  print("dataArray",dataArray)
-            //
-            //                                  for items in dataArray
-            //                                  {
-            //
-            ////                                      tempArrayDict.updateValue(items["transports"] as! [String], forKey: "transports")
-            //                                      tempArrayDict.updateValue(items["user_id"] as! String, forKey: "user_id")
-            //                                      tempArrayDict.updateValue(items["user_name"] as! String, forKey: "user_name")
-            //                                      tempArrayDict.updateValue(items["producers"] as! [String], forKey: "producers")
-            //
-            //
-            //                                      //                    if let transports = items["transports"] as? [String: Any
-            //                                      //                    {
-            //                                      //                        transportsArray.append(transports)
-            //                                      //                    }
-            //                                      //                    print(transportsArray)
-            //                                      if !(items["user_name"] as! String ==  "Rihesh")
-            //                                      {
-            //                                          mainArray.append(tempArrayDict)
-            //                                      }
-            //
-            //                                  }
-            //                                  print("MainArray : ",mainArray)
-            //                                  if mainArray.count > 0
-            //                                  {
-            //                                      for i in 0...mainArray.count-1{
-            //
-            //                                          let test = mainArray[i]["producers"] as! [String]
-            //                                          print("test",test)
-            //                                          if test.count > 0
-            //                                          {
-            //                                              for i in 0...test.count-1{
-            //                                                  getCosumerStream(roomid: roomID, transportId: id, ProducerId: test[i] , RtpCapabilities: capabilityJSON)
-            //                                              }
-            //                                          }
-            //
-            //                                      }
-            //                                  }
-            //                                  print("mainArray",mainArray)
-            //                              }
-            
-            //            for items in transpo {
-            //                if let userName = items["user_name"] as? String, userName != "Rihesh" {
-            //                    if let transports = items["transports"] as? [String] {
-            //                        let dictionary: [String: Any] = ["user_name": userName, "transports": transports]
-            //                        transportsArray.append(dictionary)
-            //                    }
-            //                }
-            //            }
-            //
-            //            //            print(transportsArray)
-            //
-            //            print("Producer Data :" , dataArray)
+////
+////                                    if let dataArray = data["Data"] as? [[String: Any]]
+////                                        if let userId = item["transports"] as? [[String:Any]] {
+////                                    {
+////                                        for item in dataArray {
+////            //                                    userIds.append(userId)
+////                                            }
+////                                        }
+////                                        print(userIds)
+////                                    }
+//                                          var transportsArray: [String: Any] = [:]
+//                                          var tempArrayDict=[String:Any]()
+//                                          var mainArray=[[String:Any]]()
+//                                          if let dataArray = data["Data"] as? [[String: Any]]
+//                                          {
+//                                              print("dataArray",dataArray)
+//
+//                                              for items in dataArray
+//                                              {
+//
+//            //                                      tempArrayDict.updateValue(items["transports"] as! [String], forKey: "transports")
+//                                                  tempArrayDict.updateValue(items["user_id"] as! String, forKey: "user_id")
+//                                                  tempArrayDict.updateValue(items["user_name"] as! String, forKey: "user_name")
+//                                                  tempArrayDict.updateValue(items["producers"] as! [String], forKey: "producers")
+//
+//
+//                                                  //                    if let transports = items["transports"] as? [String: Any
+//                                                  //                    {
+//                                                  //                        transportsArray.append(transports)
+//                                                  //                    }
+//                                                  //                    print(transportsArray)
+//                                                  if !(items["user_name"] as! String ==  "Rihesh")
+//                                                  {
+//                                                      mainArray.append(tempArrayDict)
+//                                                  }
+//
+//                                              }
+//                                              print("MainArray : ",mainArray)
+//                                              if mainArray.count > 0
+//                                              {
+//                                                  for i in 0...mainArray.count-1{
+//
+//                                                      let test = mainArray[i]["producers"] as! [String]
+//                                                      print("test",test)
+//                                                      if test.count > 0
+//                                                      {
+//                                                          for i in 0...test.count-1{
+//                                                              getCosumerStream(roomid: roomID, transportId: id, ProducerId: test[i] , RtpCapabilities: capabilityJSON)
+//                                                          }
+//                                                      }
+//
+//                                                  }
+//                                              }
+//                                              print("mainArray",mainArray)
+//                                          }
+//
+////                        for items in transpo {
+////                            if let userName = items["user_name"] as? String, userName != "Rihesh" {
+////                                if let transports = items["transports"] as? [String] {
+////                                    let dictionary: [String: Any] = ["user_name": userName, "transports": transports]
+////                                    transportsArray.append(dictionary)
+////                                }
+////                            }
+////                        }
+//
+//                        //            print(transportsArray)
+//
+                        print("Producer Data :" , dataArray)
         }
         
         if Event == "consumed"
         {
+//            startVideoAndAudio()
             let data = message.dictionary("Data")
+            print("consumed data is :",data)
             //let dataArray = data.array("params")
             let paramsData = data.dictionary("params")
             var consumerIndoDic:[String:Any] = paramsData
@@ -1034,7 +956,6 @@ extension RequestHelper:WebSocketDelegate{
                 self.consumersInfoVideos.append(consumerIndoDic)
                 
             }
-            // if !peersIDs.isEmpty{
             let id = consumerIndoDic.strValue("id")
             let producerId = consumerIndoDic.strValue("producerId")
             let rtpParameters = JSON(consumerIndoDic.dictionary("rtpParameters")).description
@@ -1051,10 +972,6 @@ extension RequestHelper:WebSocketDelegate{
                 self.delegate?.onNewConsumerUpdateUI(helper: self, consumer: consumer)
                 print("UIupdate completed")
             }
-            //             createConsumerAndResume() //to be uncommented
-            //            startVideoAndAudio()
-            // self.sendResponse(requestId:requestId)
-            // }
         }
         // MARK: - Event new producers
         if Event == "newProducers"
