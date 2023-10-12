@@ -402,7 +402,7 @@
                                 <state key="normal" image="sidebar"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9Y-Zq-s3Q">
-                                <rect key="frame" x="268" y="71" width="32" height="30"/>
+                                <rect key="frame" x="268" y="71" width="32" height="32"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="clock"/>
                             </button>
@@ -655,7 +655,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5h-bC-Ttb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4046.5648854961833" y="-57.04225352112676"/>
+            <point key="canvasLocation" x="3503" y="673"/>
         </scene>
         <!--Group-->
         <scene sceneID="WTf-Io-Wsh">
@@ -719,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQO-Vb-RHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4834.3511450381675" y="-56.338028169014088"/>
+            <point key="canvasLocation" x="4332" y="673"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="EqC-a0-BLf">
@@ -729,24 +729,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exT-QD-adJ" customClass="RTCEAGLVideoView">
-                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR6-bk-mO4">
-                                        <rect key="frame" x="343" y="701" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="call_End"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.094117647060000004" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hAs-09-Acb">
-                                <rect key="frame" x="8" y="633" width="150" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hAs-09-Acb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xKd-VQ-xa7">
-                                    <size key="itemSize" width="150" height="200"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xKd-VQ-xa7">
+                                    <size key="itemSize" width="393" height="852"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -757,26 +744,37 @@
                                     <outlet property="delegate" destination="9ZH-fM-dKZ" id="8jP-fa-0WT"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-tt-oTi">
-                                <rect key="frame" x="344" y="701" width="50" height="50"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exT-QD-adJ" customClass="RTCEAGLVideoView">
+                                <rect key="frame" x="16" y="577" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="mute_video"/>
-                            </button>
+                                <color key="backgroundColor" red="0.094117647060000004" green="0.14901960780000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M09-Tc-2vy">
-                                <rect key="frame" x="344" y="633" width="50" height="50"/>
+                                <rect key="frame" x="116" y="735" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="audio"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR6-bk-mO4">
+                                <rect key="frame" x="174" y="735" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="call_End"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-tt-oTi">
+                                <rect key="frame" x="232" y="735" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="mute_video"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NPd-hs-byU"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="exT-QD-adJ" firstAttribute="trailing" secondItem="NPd-hs-byU" secondAttribute="trailing" id="Uju-Th-BB0"/>
-                            <constraint firstAttribute="bottom" secondItem="exT-QD-adJ" secondAttribute="bottom" id="g12-xM-jUZ"/>
-                            <constraint firstItem="exT-QD-adJ" firstAttribute="top" secondItem="NPd-hs-byU" secondAttribute="top" id="o4q-cK-3gH"/>
-                            <constraint firstItem="exT-QD-adJ" firstAttribute="leading" secondItem="NPd-hs-byU" secondAttribute="leading" id="uf7-QJ-d6K"/>
+                            <constraint firstItem="hAs-09-Acb" firstAttribute="trailing" secondItem="NPd-hs-byU" secondAttribute="trailing" id="S2D-km-2oH"/>
+                            <constraint firstItem="hAs-09-Acb" firstAttribute="top" secondItem="U0w-tS-Iz2" secondAttribute="top" id="aVC-uE-1Yp"/>
+                            <constraint firstItem="hAs-09-Acb" firstAttribute="leading" secondItem="NPd-hs-byU" secondAttribute="leading" id="cJ1-77-fDn"/>
+                            <constraint firstAttribute="bottom" secondItem="hAs-09-Acb" secondAttribute="bottom" id="o9y-xt-cBi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tOs-8x-BOh"/>
@@ -788,6 +786,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zy8-De-IJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3220.6106870229005" y="-57.04225352112676"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jan-05-qCd">
+            <objects>
+                <viewController id="Own-1Y-th3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MYo-CY-DqX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yQ4-Zj-AHQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xlk-LY-T2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4102" y="-33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kFZ-wc-Ph0">
@@ -825,7 +838,7 @@
     <resources>
         <image name="audio" width="50" height="50"/>
         <image name="call_End" width="50" height="50"/>
-        <image name="clock" width="30" height="30"/>
+        <image name="clock" width="32" height="32"/>
         <image name="forgotpasswordBg" width="374" height="800"/>
         <image name="greenTick" width="78" height="78"/>
         <image name="header" width="194" height="54"/>
