@@ -49,7 +49,7 @@ class MySendTransportListener:NSObject,SendTransportListener{
             print("Check if all done，transfer onConnectCallBack")
            // self.helper.onConnectCallBack(transportId:transportId, dtlsParameters:self.dtlsParameters)
             
-            self.helper.connectTransport(transportTypeStr: "Producer", transportID: transport.getId(), RoomId: roomID, dtlsParameters: JSON(rawValue: self.dtlsParameters.toDic()) ?? "", role: "server")
+            self.helper.connectTransport(transportTypeStr: "Producer", transportID: producerTransportId, RoomId: roomID, dtlsParameters: JSON(rawValue: self.dtlsParameters.toDic()) ?? "", role: "server")
             
             print("transportId : ",transport.getId() , " dtlsParameters :" ,  JSON(rawValue: self.dtlsParameters.toDic()))
         }
@@ -66,7 +66,7 @@ class MyRecvTransportListener : NSObject, RecvTransportListener{
 //        DispatchQueue.global().asyncAfter(deadline: DispatchTime.now()+2.5) {
             print("\r\n *********MyRecvTransportListener(onConnect) \r\n:\(id),\(Thread.current)\r\n")
            // self.helper.onConnectCallBack(transportId: id, dtlsParameters: dtlsParameters)
-        self.helper.connectTransport(transportTypeStr: "Consumer", transportID: id, RoomId: roomID, dtlsParameters: JSON(rawValue: dtlsParameters.toDic()) ?? "", role: "client")
+        self.helper.connectTransport(transportTypeStr: "Consumer", transportID: consumerTransportId, RoomId: roomID, dtlsParameters: JSON(rawValue: dtlsParameters.toDic()) ?? "", role: "client")
         
 //         }
 

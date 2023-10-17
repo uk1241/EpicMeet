@@ -11,7 +11,8 @@ import UIKit
 var devices: [AVCaptureDevice] = []
 struct SocketUtil{
 //    static let BASE_URL = "192.168.1.105:3016/"
-    static let BASE_URL = "vps271818.vps.ovh.ca:3018/"
+//    static let BASE_URL = "vps271818.vps.ovh.ca:3018/"
+    static let BASE_URL = "167.114.36.64:3018/"
     ///Get 7-digit random characters, random numbers
     public static func getSocketKey() -> Int {
         var randomString = ""

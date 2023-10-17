@@ -8,6 +8,8 @@ import Starscream
 var userID = String()
 var nameID = String()
 var userIds: [[String:Any]] = []
+var consumerTransportId = String()
+var producerTransportId = String()
 //var roomList = [[String:Any]]()
 protocol RequestHelperDelegate {
     func onNewConsumerUpdateUI(helper:RequestHelper,consumer:Consumer)
@@ -31,6 +33,7 @@ class RequestHelper : NSObject{
     var producer_idArray=[String]()
     var producerId=[String]()
     var videoProducer:Producer!
+
     public var joinedRoom = false
     private var device:MediasoupDevice?
     private var sendTransport:SendTransport?
@@ -433,12 +436,6 @@ extension RequestHelper{
     }
     //MARK: - create producer
     func onProduceCallBack(transportId:String,kind:String,rtpParameters:String)->JSON{
-        //        guard let socket = self.socket else{return [:]}
-        //        let rtpDic = rtpParameters.toDic()
-        //        let params:[String:Any] = ["transportId":transportId,"kind":kind,"rtpParameters":rtpDic]
-        //        let message = Message(socket: socket, messageId: ActionEventID.kProduce)
-        //        let result = message.send(method: ActionEvent.produce, data: params)
-        //        return result
         let jsonArray = JSON ()
         let data = rtpParameters.data(using: .utf8)!
         do {
@@ -799,6 +796,12 @@ extension RequestHelper:WebSocketDelegate{
             let data =  message.dictionary("Data")
             id = data.strValue("transportId")
             let transportTypeSTR = data.strValue("transportType")
+            if(transportTypeSTR == "producerTransport"){
+                producerTransportId = id;
+            }else{
+                
+                 consumerTransportId = id;
+            }
             let params = jsonWebRTCTransportObj["params"]
             let paramsDict = data.dictionary("params")
             let iceParameters = JSON(paramsDict.dictionary("iceParameters")).description //paramsDict.dictionary("iceParameters")   // JSON(params["iceParameters"]).description
@@ -814,11 +817,11 @@ extension RequestHelper:WebSocketDelegate{
                 self.sendListener = MySendTransportListener()
                 self.sendListener.helper = self
                 
-                self.sendTransport = device?.createSendTransport(self.sendListener, id:id, iceParameters: iceParameters, iceCandidates: iceCandidates, dtlsParameters: dtlsParameters)
+                self.sendTransport = device?.createSendTransport(self.sendListener, id:producerTransportId, iceParameters: iceParameters, iceCandidates: iceCandidates, dtlsParameters: dtlsParameters)
                 //                connectTransport(transportTypeStr: "Producer", transportID: id, dtlsParameters: JSON(paramsDict.dictionary("dtlsParameters")), role: "server")
                 createWebRtcTransport(transportTypeStr: "consumerTransport", RoomId: roomID, deviceObj: self.device!)
                 startVideoAndAudio()
-//                createConsumerAndResume()
+                createConsumerAndResume()
             }
             else
             {
@@ -857,8 +860,9 @@ extension RequestHelper:WebSocketDelegate{
             print("producer_idArray",producer_idArray)
             if producer_idArray.count>0{
                 for i in 0...producer_idArray.count-1{
-                    getCosumerStream(roomid: roomID, transportId: id, ProducerId: producer_idArray[i] , RtpCapabilities: capabilityJSON)
+                    getCosumerStream(roomid: roomID, transportId: consumerTransportId, ProducerId: producer_idArray[i] , RtpCapabilities: capabilityJSON)
                 }
+                print("Transport id for consumer stream is : ",id)
             }
         }
         if Event == "ParticipantListUpdate"
