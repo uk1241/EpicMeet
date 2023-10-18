@@ -382,7 +382,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="zcs-te-peg">
                                 <rect key="frame" x="16" y="59" width="194" height="54"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-Lb-r99">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="70" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hd7-Lb-r99">
                                 <rect key="frame" x="16" y="133" width="361" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -760,6 +760,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="call_End"/>
+                                <connections>
+                                    <action selector="endCallAction:" destination="9ZH-fM-dKZ" eventType="touchUpInside" id="qUe-BK-apM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG0-tt-oTi">
                                 <rect key="frame" x="232" y="735" width="50" height="50"/>
@@ -779,6 +782,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="tOs-8x-BOh"/>
                     <connections>
+                        <outlet property="EndCallBtn" destination="SR6-bk-mO4" id="mOR-VK-Wnn"/>
                         <outlet property="localVideoView" destination="exT-QD-adJ" id="HwM-ZP-9v9"/>
                         <outlet property="videoCollectionView" destination="hAs-09-Acb" id="Hov-Ts-hPU"/>
                     </connections>

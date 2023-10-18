@@ -23,9 +23,14 @@ protocol dashBoardDelegate
 {
     func dashboardData(roomlist : [[String:Any]])
 }
+protocol exitRoomDelegate
+{
+     func rootback()
+}
 class RequestHelper : NSObject{
     var dashBoardClassDelegate:dashBoardDelegate!
     var signIndelegate : signIndelegate?
+    var exitRoomDelegate: exitRoomDelegate?
     var email = ""
     var password = ""
     var delegate:RequestHelperDelegate?
@@ -427,7 +432,7 @@ extension RequestHelper{
         let deviceRtpCapabilities = device.getRtpCapabilities() ?? ""
         let data:[String:Any] = [
             "device":SocketUtil.deviceInfo(),
-            "displayName": nameID,
+            "displayName": String(nameID),
             "rtpCapabilities": JSON.init(parseJSON: deviceRtpCapabilities)
         ]
         let message = Message(socket: socket, messageId: ActionEventID.kJoinID)
@@ -478,6 +483,20 @@ extension RequestHelper{
         print("RTP CAPABLITIES\(returnadata)")
         let json:JSON = JSON(returnadata)
         return consume
+    }
+    //MARK: - exit from the call
+    func exitRoom(name:String,roomid:Int) -> JSON
+    {
+        guard let socket = self.socket else{return JSON()}
+        let message = Message(socket: socket, messageId: ActionEventID.kConnectID)
+        let dataRequest : JSON = ["Name":name,"RoomId":roomid]
+        let getExistRoomRequest : JSON = [
+            "commandType" : "ExitRoom",
+            "Data" : dataRequest
+        ]
+        let returnData = message.sendData(method: getExistRoomRequest)
+        print("exist room reqeust :", returnData)
+        return JSON(rawValue: returnData) ?? ""
     }
     //MARK: -connect new users
     public func onConnectCallBack(transportId:String,dtlsParameters:String){
@@ -593,6 +612,7 @@ extension RequestHelper{
         } else {
             self.startVideo()
         }
+//        createConsumerAndResume()
         
     }
     //build video
@@ -686,6 +706,7 @@ extension RequestHelper{
         }
         print("\r\nAudio created successfully")
         self.totalProducers[kindProducer.getId()] = kindProducer
+//        createConsumerAndResume()
     }
     func stopAudio(){
         guard let audioTrack = peerConnectionFactory?.audioTrack(withTrackId: ARDEmu.kARDAudioTrackId) else{return}
@@ -697,6 +718,7 @@ extension RequestHelper{
         audioTrack.isEnabled = true
         print("Audio Restarted")
     }
+    
 }
 // MARK: - events happening after the call
 extension RequestHelper:WebSocketDelegate{
@@ -821,7 +843,7 @@ extension RequestHelper:WebSocketDelegate{
                 //                connectTransport(transportTypeStr: "Producer", transportID: id, dtlsParameters: JSON(paramsDict.dictionary("dtlsParameters")), role: "server")
                 createWebRtcTransport(transportTypeStr: "consumerTransport", RoomId: roomID, deviceObj: self.device!)
                 startVideoAndAudio()
-                createConsumerAndResume()
+//                createConsumerAndResume()
             }
             else
             {
@@ -829,6 +851,7 @@ extension RequestHelper:WebSocketDelegate{
                 self.recvListener.helper = self
                 self.recvTransport = device?.createRecvTransport(self.recvListener, id: id, iceParameters: iceParameters, iceCandidates: iceCandidates, dtlsParameters: dtlsParameters)
                 // connectTransport(transportTypeStr: "Consumer", transportID: id, dtlsParameters: JSON(paramsDict.dictionary("dtlsParameters")), role: "client")
+//                startVideoAndAudio()
             }
         }
         if Event == "Transportconnected"
@@ -870,7 +893,7 @@ extension RequestHelper:WebSocketDelegate{
             let data =  message.dictionary("Data")
             print("ParticipantListUpdate data : ",data)
             let dataArray = data.array("Data")
-            let producerDic = dataArray
+//            let producerDic = dataArray
 ////
 ////                                    if let dataArray = data["Data"] as? [[String: Any]]
 ////                                        if let userId = item["transports"] as? [[String:Any]] {
@@ -976,6 +999,8 @@ extension RequestHelper:WebSocketDelegate{
                 self.delegate?.onNewConsumerUpdateUI(helper: self, consumer: consumer)
                 print("UIupdate completed")
             }
+//            createConsumerAndResume()
+//            startVideoAndAudio()
         }
         // MARK: - Event new producers
         if Event == "newProducers"
@@ -1048,6 +1073,13 @@ extension RequestHelper:WebSocketDelegate{
             print ("RoomList DataArray : \n",dataArray)
             NotificationCenter.default.post(name: NSNotification.Name("DashboardParticipantsListSuccess"), object: dataArray)
             self.dashBoardClassDelegate?.dashboardData(roomlist: dataArray)
+        }
+        //MARK: - room exited evet
+        if Event == "RoomExited"
+        {
+            DashboardParticipantsList(SearchKey: "", userId: userID)
+            self.exitRoomDelegate?.rootback()
+           
         }
         //MARK: - new consumer event
         NotificationCenter.default.post(name: NSNotification.Name("kOnRecveMessage"), object: message)

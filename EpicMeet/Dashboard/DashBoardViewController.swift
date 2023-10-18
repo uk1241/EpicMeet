@@ -66,6 +66,9 @@ extension DashBoardViewController: UITableViewDelegate,UITableViewDataSource,das
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 70
+    }
     @objc func callBtnTapped(sender:UIButton)
     {
         let roomid = roomlist[sender.tag]["roomid"]
