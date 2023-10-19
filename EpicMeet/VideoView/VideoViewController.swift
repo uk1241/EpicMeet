@@ -35,13 +35,13 @@ class VideoViewController: UIViewController {
 
     @IBAction func endCallAction(_ sender: Any) {
         command.exitRoom(name: nameID, roomid: roomID)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let DashVc = storyboard.instantiateViewController(withIdentifier: "DashBoardViewController") as! DashBoardViewController
-        DashVc.command = self.command
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(DashVc, animated: true)
-
-        }
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let DashVc = storyboard.instantiateViewController(withIdentifier: "DashBoardViewController") as! DashBoardViewController
+//        DashVc.command = self.command
+//        if let navigationController = self.navigationController {
+//            navigationController.pushViewController(DashVc, animated: true)
+//
+//        }
     }
     
 }
